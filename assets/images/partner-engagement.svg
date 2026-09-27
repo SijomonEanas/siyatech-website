@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <!-- Engagement Swirl / Flame Icon -->
+  <g transform="translate(10, 10)">
+    <path d="M20 2 C9 2 2 10 2 20 C2 30 10 38 20 38 C31 38 38 29 38 20 C38 18 36 17 34 17 C32 17 31 18 30 20 C29 26 25 31 19 31 C13 31 8 26 8 20 C8 14 13 9 19 9 C22 9 24 10 26 12 C27 13 29 13 30 11 C31 10 31 8 29 7 C26 4 23 2 20 2 Z" fill="#E11D48"/>
+    <path d="M22 13 C17 13 13 17 13 22 C13 27 17 30 22 30 C26 30 29 27 29 23 C29 21 27 20 25 20 C23 20 22 21 22 22 C22 24 20 25 18 25 C16 25 15 23 15 22 C15 20 16 18 18 18 C20 18 21 19 22 20" fill="#BE123C"/>
+  </g>
+  <!-- Text -->
+  <text x="60" y="37" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="800" font-size="24" fill="#0F172A" letter-spacing="-0.5">Engagement</text>
+</svg>

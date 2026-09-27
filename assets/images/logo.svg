@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80" fill="none">
+  <defs>
+    <linearGradient id="shieldGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="45%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="shieldBorderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="greenBrandGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#22C55E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shield Badge -->
+  <g transform="translate(8, 6)">
+    <path d="M34 2 L62 13 C62 44 48 59 34 67 C20 59 6 44 6 13 Z" 
+          fill="url(#shieldGradLight)" stroke="url(#shieldBorderLight)" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <path d="M34 9 L55 18 C55 42 43 53 34 60 C25 53 13 42 13 18 Z" 
+          fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.5"/>
+
+    <!-- ST Monogram -->
+    <path d="M23 25 C23 20 45 20 45 25 C45 29 25 29 25 35 C25 41 45 40 45 35" 
+          fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M25 25 L43 25" 
+          fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+    
+    <path d="M34 25 L34 49" 
+          fill="none" stroke="#22C55E" stroke-width="3.8" stroke-linecap="round"/>
+    <path d="M28 49 L40 49" 
+          fill="none" stroke="#22C55E" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography: SIYATECH -->
+  <g transform="translate(84, 15)">
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="34" letter-spacing="1.5" fill="#0F172A">SIYATECH</text>
+    <text x="1" y="50" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="8.8" letter-spacing="1.4" fill="#0369A1">
+      SECURE INFRASTRUCTURE. <tspan fill="#16A34A">YOUR ADVANTAGE.</tspan>
+    </text>
+  </g>
+</svg>
