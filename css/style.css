@@ -5515,3 +5515,370 @@ a.matrix-item-row:hover {
     font-size: 1.4rem !important;
   }
 }
+
+
+/* ==========================================================================
+   VERSION 1.4: PREMIUM REFINED INFRASTRUCTURE DESIGN SYSTEM
+   ========================================================================== */
+
+/* Enhanced Section Whitespace & Calm Hierarchy */
+.brochure-sheet {
+  margin-bottom: 2.75rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45) !important;
+}
+
+.brochure-sheet-body {
+  padding: 3rem 2.5rem !important;
+}
+
+.section-title,
+.solutions-main-title {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+}
+
+.section-subtitle {
+  color: #94a3b8 !important;
+  font-size: 1.05rem !important;
+  max-width: 780px !important;
+  margin-top: 0.65rem !important;
+  line-height: 1.65 !important;
+}
+
+/* 6-Category Services Grid */
+.services-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+}
+
+.service-cat-card {
+  background: rgba(10, 18, 36, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.service-cat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 25px rgba(2, 132, 199, 0.15);
+}
+
+.service-cat-banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.service-cat-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-cat-card:hover .service-cat-banner img {
+  transform: scale(1.05);
+}
+
+.service-cat-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.15) 0%, rgba(3, 7, 18, 0.85) 100%);
+}
+
+.service-cat-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.32rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(3, 7, 18, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #38bdf8;
+}
+
+.service-cat-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-cat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.service-cat-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  background: rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-cat-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #38bdf8;
+}
+
+.service-cat-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.service-cat-desc {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+  min-height: 44px;
+}
+
+.service-cat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-cat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.service-cat-item svg {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  fill: #22c55e;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.service-cat-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-cat-link {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #38bdf8;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.service-cat-link:hover {
+  color: #00f0ff;
+  transform: translateX(3px);
+}
+
+/* 9-Industry Grid */
+.industries-grid-9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.35rem;
+  margin-top: 2rem;
+}
+
+.industry-box-card {
+  background: rgba(10, 18, 36, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.industry-box-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.industry-box-thumb {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+.industry-box-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.industry-box-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.1) 0%, rgba(3, 7, 18, 0.8) 100%);
+}
+
+.industry-box-body {
+  padding: 1.15rem 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.industry-box-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+}
+
+.industry-box-desc {
+  font-size: 0.86rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Why SIYATECH 8-Card Grid */
+.why-grid-8 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.why-card-item {
+  background: rgba(10, 18, 36, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.why-card-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.why-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.why-card-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #38bdf8;
+}
+
+.why-card-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+}
+
+.why-card-desc {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Navigation CTA Button */
+.nav-cta-btn {
+  background: rgba(2, 132, 199, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-cta-btn:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+/* Responsive Rules for v1.4 Components */
+@media (max-width: 1024px) {
+  .services-grid-6 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+  .industries-grid-9 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.15rem !important;
+  }
+  .why-grid-8 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.15rem !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .services-grid-6,
+  .industries-grid-9,
+  .why-grid-8 {
+    grid-template-columns: 1fr !important;
+    gap: 1.1rem !important;
+  }
+  .brochure-sheet-body {
+    padding: 1.5rem 1rem !important;
+  }
+  .service-cat-banner {
+    height: 150px !important;
+  }
+  .industry-box-thumb {
+    height: 130px !important;
+  }
+  .nav-cta-btn {
+    display: none !important;
+  }
+}
