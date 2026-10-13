@@ -9,6 +9,13 @@
   <meta name="author" content="SIYATECH">
   <link rel="canonical" href="https://siyatech.tech/">
   
+  <!-- Security Headers (Client-Side Defense-in-Depth: CWE-693, CWE-1021, CWE-79) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://api.web3forms.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com;">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+  
   <!-- Open Graph / Social Meta -->
   <meta property="og:title" content="SIYATECH | Secure Infrastructure. Your Advantage.">
   <meta property="og:description" content="Professional IT infrastructure, enterprise networking, cybersecurity, surveillance, structured cabling, and managed IT operations.">
@@ -1403,7 +1410,12 @@
                 <input type="hidden" name="access_key" value="31f6a48d-386e-4388-aea0-a8e348b3567b" id="web3forms_key">
                 <input type="hidden" name="subject" value="New Infrastructure Consultation Request - SIYATECH">
                 <input type="hidden" name="from_name" value="SIYATECH Website Inquiry">
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
+                <!-- Anti-CSRF & Anti-Replay Defense Tokens (CWE-352 / OWASP A01 Mitigation) -->
+                <input type="hidden" name="csrf_token" id="csrf_token" value="">
+                <input type="hidden" name="_csrf" id="_csrf" value="">
+                <input type="hidden" name="anticsrf" id="anticsrf" value="">
+                <input type="hidden" name="_form_timestamp" id="formTimestamp" value="">
 
                 <div class="form-row-2">
                   <div class="form-group">

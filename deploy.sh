@@ -42,6 +42,13 @@ sudo chown -R www-data:www-data "$WEB_DIR"
 sudo find "$WEB_DIR" -type d -exec chmod 755 {} \;
 sudo find "$WEB_DIR" -type f -exec chmod 644 {} \;
 
+# Deploy hardened Nginx configuration if present
+if [ -f "$REPO_DIR/nginx/siyatech.conf" ]; then
+    echo "Applying hardened Nginx security configuration..."
+    sudo cp "$REPO_DIR/nginx/siyatech.conf" /etc/nginx/sites-available/siyatech.conf
+    sudo ln -sf /etc/nginx/sites-available/siyatech.conf /etc/nginx/sites-enabled/siyatech.conf
+fi
+
 echo "=== [5/5] Testing & Reloading Web Server ==="
 sudo nginx -t
 sudo systemctl reload nginx
