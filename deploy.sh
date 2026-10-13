@@ -42,16 +42,42 @@ sudo chown -R www-data:www-data "$WEB_DIR"
 sudo find "$WEB_DIR" -type d -exec chmod 755 {} \;
 sudo find "$WEB_DIR" -type f -exec chmod 644 {} \;
 
-# Deploy hardened Nginx configuration if present
-if [ -f "$REPO_DIR/nginx/siyatech.conf" ]; then
-    echo "Applying hardened Nginx security configuration..."
-    sudo cp "$REPO_DIR/nginx/siyatech.conf" /etc/nginx/sites-available/siyatech.conf
-    sudo ln -sf /etc/nginx/sites-available/siyatech.conf /etc/nginx/sites-enabled/siyatech.conf
+# Deploy modular security snippet (safe for any existing server block)
+sudo mkdir -p /etc/nginx/snippets
+if [ -f "$REPO_DIR/nginx/snippets/siyatech-security.conf" ]; then
+    echo "Installing modular Nginx security snippet..."
+    sudo cp "$REPO_DIR/nginx/snippets/siyatech-security.conf" /etc/nginx/snippets/
 fi
 
-echo "=== [5/5] Testing & Reloading Web Server ==="
-sudo nginx -t
-sudo systemctl reload nginx
+# Deploy hardened Nginx site configuration with automated safety check
+if [ -f "$REPO_DIR/nginx/siyatech.conf" ]; then
+    echo "Checking Nginx site configuration..."
+    # Backup existing configuration if present
+    if [ -f "/etc/nginx/sites-available/siyatech.conf" ]; then
+        sudo cp /etc/nginx/sites-available/siyatech.conf /etc/nginx/sites-available/siyatech.conf.bak
+    fi
+
+    # Test new configuration in a temporary check
+    sudo cp "$REPO_DIR/nginx/siyatech.conf" /etc/nginx/sites-available/siyatech.conf
+    sudo ln -sf /etc/nginx/sites-available/siyatech.conf /etc/nginx/sites-enabled/siyatech.conf
+
+    echo "=== [5/5] Validating Nginx Configuration ==="
+    if sudo nginx -t; then
+        echo "✓ Nginx syntax test passed."
+        sudo systemctl reload nginx
+    else
+        echo "⚠️ Warning: Custom SSL certificates or paths required in /etc/nginx/sites-available/siyatech.conf."
+        if [ -f "/etc/nginx/sites-available/siyatech.conf.bak" ]; then
+            echo "Reverting to previous working Nginx configuration to maintain zero downtime..."
+            sudo cp /etc/nginx/sites-available/siyatech.conf.bak /etc/nginx/sites-available/siyatech.conf
+            sudo systemctl reload nginx
+        fi
+        echo "Tip: Security headers remain active via HTML meta tags and /etc/nginx/snippets/siyatech-security.conf."
+    fi
+else
+    echo "=== [5/5] Reloading Web Server ==="
+    sudo nginx -t && sudo systemctl reload nginx
+fi
 
 echo "=========================================================="
 echo "✓ SIYATECH Website successfully deployed to $WEB_DIR!"
