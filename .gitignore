@@ -1,0 +1,6 @@
+# Local Backups & Secrets
+assets/images_original_backup/
+server/.env
+*.bak
+.DS_Store
+Thumbs.db
